@@ -1,66 +1,16 @@
-## Foundry
+In this project i created a Presale smart contract (ICO) addding a vesting functionality to the smart contract where users who buyed
+in the presale can claim their tokens only after a minimum period of 30 days.
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Note: The name ShibaPinu has been invented. It is not associated to any ERC20 contract on the mainnet.
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
+In order to test the VestingIco smart contract digit:
 
 ```shell
-$ forge build
+$ forge test --fork-url yourUrl --match-path test/VestingIco.t.sol -vvv
 ```
 
-### Test
+In order to test the ShibaPinu ERC20 contract digit:
 
 ```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+$ forge test --fork-url yourUrl --match-path test/ShibaPinu.t.sol -vvv
 ```
